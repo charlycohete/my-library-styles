@@ -7,5 +7,5 @@ This is a basic CSS style library that resets margins, sets typography, and styl
 Simply add the following link in the `<head>` of your HTML file:
 
 ```html
-<link rel="stylesheet" href="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPOSITORY/master/styles.css">
+<link rel="stylesheet" href="https://raw.githubusercontent.com/charlycohete/my-library-styles/master/styles.css">
 
