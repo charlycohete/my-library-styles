@@ -1,4 +1,4 @@
-# My CSS Style Library
+# My CSS Library Styles
 
 This is a basic CSS style library that resets margins, sets typography, and styles common elements like headers, buttons, sections, and more.
 
