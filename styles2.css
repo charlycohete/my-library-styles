@@ -1,0 +1,101 @@
+/* estilos-verde.css */
+
+/* Estilo para el fondo de la página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaf4e2; /* Fondo suave verde claro */
+  color: #2f4f2f; /* Texto verde oscuro */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para los encabezados */
+h1, h2, h3 {
+  font-family: 'Helvetica', sans-serif;
+  color: #2e8b57; /* Verde mar oscuro para encabezados */
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+/* Estilo para los botones */
+button {
+  background-color: #4caf50; /* Verde hierba */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #388e3c; /* Verde más oscuro cuando se pasa el ratón */
+}
+
+/* Estilo para los enlaces */
+a {
+  color: #388e3c; /* Verde oscuro */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #66bb6a; /* Verde más claro cuando se pasa el ratón */
+}
+
+/* Estilo para las tarjetas (divs) */
+.card {
+  background-color: #ffffff; /* Fondo blanco */
+  border: 1px solid #4caf50; /* Borde verde claro */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más prominente */
+}
+
+/* Estilo para los formularios */
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #66bb6a; /* Borde verde claro */
+  border-radius: 4px;
+  background-color: #f1f8e9; /* Fondo verde muy claro */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+  border-color: #4caf50; /* Borde verde al enfocar */
+  background-color: #e8f5e9; /* Fondo verde más claro */
+}
+
+/* Estilo para el pie de página */
+footer {
+  background-color: #388e3c; /* Fondo verde oscuro */
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
