@@ -1,0 +1,407 @@
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, #000000, #1e1d1d); /* Gradiente vertical */
+  overflow-x: hidden; /* Evitar la barra de desplazamiento horizontal */
+}
+
+.App-header {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #000000;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #ffffff;
+  text-align: left;
+}
+
+h4,
+h5 {
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+h6 {
+  margin-bottom: 20px;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+h4 {
+  font-size: 2.6em;
+  text-align: left;
+  margin-top: 1px;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+/* Menú lateral */
+.menu {
+  list-style-type: none;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 55px;
+  left: 20px;
+  width: 200px;
+  box-shadow: 0 0 16px rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 574px;
+  overflow-y: auto;
+}
+
+.menu li {
+  cursor: pointer;
+  padding: 12px;
+  background-color: #2b2c2d;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+  background-color: #1a7dc4;
+}
+
+/* Contenido dinámico */
+.option-details {
+  margin-left: 260px;
+  margin-top: 50px;
+  background-color: rgb(255, 255, 255);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 16px rgb(255, 255, 255);
+  width: calc(95% - 260px);
+  height: 555px;
+  overflow-y: auto;
+  overflow-x: hidden; /* Evitar la barra de desplazamiento horizontal */
+  overflow-y: hidden; /* Evitar la barra de desplazamiento vertical */
+}
+
+/* Sección de perfil */
+.profile-section {
+  text-align: left;
+  position: relative;
+  margin-top: 30px; /* Subir el contenido para que encaje dentro del marco */
+}
+
+.profile-section p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.transactions-table {
+  width: 98%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.transactions-table th {
+  background-color: #f4f4f4;
+  color: #000000;
+}
+
+.transactions-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.transactions-table tr:hover {
+  background-color: #e0e0e0;
+}
+
+.deposit {
+  color: rgb(0, 0, 0);
+}
+
+.withdrawal {
+  color: rgb(0, 0, 0);
+}
+
+/* -------------------------- Estilos para la sección de Transactions -------------------------- */
+.transactions-section {
+  padding: 20px;
+  background-color: #f4f4f4; /* Fondo claro */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.transactions-section h4 {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.transactions-section ul {
+  list-style-type: none; /* Quitar los puntos de la lista */
+  padding: 0;
+  margin: 0;
+}
+
+.transactions-section ul li {
+  background-color: #ffffff; /* Fondo blanco para cada transacción */
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  color: #333; /* Color de texto estándar */
+  transition: background-color 0.3s ease; /* Transición suave para hover */
+}
+
+.transactions-section ul li:nth-child(even) {
+  background-color: #f9f9f9; /* Fondo gris claro para las filas impares */
+}
+
+.transactions-section ul li:hover {
+  background-color: #e0e0e0; /* Fondo gris más oscuro al hacer hover */
+  cursor: pointer;
+}
+
+/* Estilo para el monto positivo y negativo */
+.transactions-section ul li span {
+  font-weight: bold;
+  color: #333;
+}
+
+.transactions-section ul li span.negative {
+  color: rgb(0, 0, 0); /* Monto negativo en rojo */
+}
+
+.transactions-section ul li span.positive {
+  color: green; /* Monto positivo en verde */
+}
+
+/* Estilos para la tarjeta en el perfil (Saldo Total) */
+.profile-bank-card {
+  background: linear-gradient(135deg, #636363, #1e1e1e);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0.5, 0.5, 0.5);
+  color: white;
+  width: 100%;  /* Ajustar al 100% del contenedor */
+  max-width: 350px; /* Limitar el ancho máximo */
+  height: 180px;  /* Ajustar la altura */
+  padding: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.profile-card-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-card-holder,
+.profile-card-number,
+.profile-card-expiry,
+.profile-card-cvv {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1em;
+  outline: none;
+}
+
+.profile-card-holder {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.profile-card-number {
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+
+.profile-card-footer label {
+  font-size: 1em;
+  color: white;
+}
+
+.profile-card-footer input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  text-align: center;
+}
+
+/* Sección de enviar fondos */
+.SendFunds {
+  text-align: left;
+}
+
+.SendFunds label {
+  display: block;
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.SendFunds select,
+.SendFunds input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.SendFunds button {
+  background-color: #2b2c2d;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.SendFunds button:hover {
+  background-color: #007acc;
+}
+
+/* -------------------------- Sección de Tarjetas Bancarias -------------------------- */
+/* Tarjetas Bancarias */
+.bank-cards-section {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-top: 30px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+/* Estilo general de las tarjetas bancarias */
+.bank-card {
+  background: linear-gradient(135deg, #3f3f3f, #040404);
+  border-radius: 15px;
+  box-shadow: 0 0px 16px rgb(97, 97, 97);
+  color: white;
+  width: 380px;
+  height: 200px;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 2;
+  transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Efecto al pasar el ratón sobre la tarjeta */
+.bank-card:hover {
+  transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+}
+
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-holder,
+.card-number,
+.card-expiry,
+.card-cvv {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1em;
+  outline: none;
+}
+
+.card-holder {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.card-number {
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+
+.card-footer label {
+  font-size: 1em;
+  color: white;
+}
+
+.card-footer input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  text-align: center;
+}
+
+/* Añadir un fondo de tarjeta más realista */
+.bank-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.card-details {
+  z-index: 2;
+}
+
+.bank-card .card-content {
+  z-index: 3;
+}
+
+/* Estilo para tarjetas Visa */
+.visa-card h5 {
+  color: white; /* Cambiar el color del texto a blanco */
+}
+
+/* Estilo para tarjetas MasterCard */
+.mastercard-card h5 {
+  color: white; /* Cambiar el color del texto a blanco */
+}
+
+/* Estilo para tarjetas Amex */
+.amex-card h5 {
+  color: white; /* Cambiar el color del texto a blanco */
+}
